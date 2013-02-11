@@ -1,4 +1,4 @@
-class Post
+class Post < ActiveRecord::Base
 	# include DataMapper::Resource
 	# property :id, Serial
 	# property :title, String

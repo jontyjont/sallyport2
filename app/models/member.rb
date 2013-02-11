@@ -1,4 +1,4 @@
-class Member
+class Member < ActiveRecord::Base
 # include DataMapper::Resource
 # property :id, Serial
 # property :fname, String

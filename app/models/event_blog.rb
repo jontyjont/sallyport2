@@ -1,4 +1,4 @@
-class Eventblog
+class Eventblog < ActiveRecord::Base
 # include DataMapper::Resource
 # property :id, Serial
 # property :comment, Text

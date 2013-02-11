@@ -1,4 +1,4 @@
-class Image
+class Image < ActiveRecord::Base
 
 # property :id, Serial
 # property :photo_uid, String

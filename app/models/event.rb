@@ -1,4 +1,4 @@
-class Event
+class Event < ActiveRecord::Base
 # include DataMapper::Resource
 # property :id, Serial
 # property :name, String

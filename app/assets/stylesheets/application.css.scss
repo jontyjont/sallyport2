@@ -11,3 +11,18 @@
  *= require_self
  *= require_tree .
  */
+
+
+$bodyBackground : #cc1010;
+
+@import 'twitter/bootstrap';
+@import 'twitter/bootstrap/responsive';
+
+
+#main{
+	background-color:#fff;
+}
+
+body{
+	padding-top:45px;
+}
