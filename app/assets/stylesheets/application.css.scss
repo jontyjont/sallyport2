@@ -13,16 +13,19 @@
  */
 
 
-$bodyBackground : #cc1010;
+
 
 @import 'twitter/bootstrap';
 @import 'twitter/bootstrap/responsive';
 
 
 #main{
-	background-color:#fff;
+	background:#ffd;
+	padding:5px;
+	border:1px dotted grey;
 }
 
 body{
-	padding-top:45px;
+	padding-top:60px;
+	
 }
