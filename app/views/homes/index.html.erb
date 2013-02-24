@@ -1,39 +1,22 @@
-<h1>Home</h1>
 
+<section class="row-fluid">
+    <h1>Sallyport Sword Dancers</h1>
+<section class="span8 offset2">
 
-<style type="text/css" media="screen">
-            .slides_container {
-                width:570px;
-                height:270px;
-            }
-            .slides_container div {
-                width:570px;
-                height:270px;
-                display:block;
-            }
-        </style>
-    
-        
-        <script>
-            $(function(){
-                $("#slides").slides();
-            });
-        </script>
+    <ul class="rslides">
+      <li><img src="http://sallyport.s3.amazonaws.com/images/morpeth.jpg" alt=""></li>
+      <li><img src="http://sallyport.s3.amazonaws.com/images/Pithead.jpg" alt=""></li>
+      <li><img src="http://sallyport.s3.amazonaws.com/images/Tanfield gates.JPG" alt=""></li>
+    </ul>
+   
+</section>
+</section>
+<section class="row-fluid ">
+<div class="span10 offset1" style="margin-top:20px;">
 
-        <div id="slides">
-            <div class="slides_container">
-                <div>
-                    <img src='http://sallyport.s3.amazonaws.com/images/morpeth.jpg';>
-                </div>
-                <div>
-                    <img src='http://sallyport.s3.amazonaws.com/images/Pithead.jpg'>
-                </div>
-                <div>
-                    <img src='http://sallyport.s3.amazonaws.com/images/Tanfield gates.JPG'>
-                </div>
-                
-            </div>
-        </div>
+<%= simple_format @intro.content %>
+</div>
+</section>
 
         
 

@@ -5,18 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag "slides.jquery.js" %>
+  <%= javascript_include_tag "responsiveslides" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
      <div class="navbar navbar-fixed-top">
        <div class="navbar navbar-inverse">
     <div class="navbar-inner">
-        <a class="brand" href="#">Sallyport Swords</a>
+        <a class="brand" href="/">Sallyport Swords</a>
         <ul class="nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
         </ul>
     </div>
     </div>
@@ -24,7 +23,7 @@
     <div class="container-fluid" >
           
     <div class="row-fluid">
-    <div class="span2">
+    <div class="span2", style="text-align:center;">
 
    <%= image_tag 'logo.png', :style=> 'margin-left:23px;margin-top:-7px;' %>
     </div>

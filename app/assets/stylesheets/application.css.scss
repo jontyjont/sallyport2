@@ -19,12 +19,21 @@
 @import 'twitter/bootstrap/responsive';
 
 
+
 #main{
-	background:#ffd;
+	background:#C0090E;
 	padding:5px;
-	border:1px dotted grey;}
+	border:1px dotted grey;
+	color:white;
+
+	}
+
+h1 {
+	text-align:center;
+}
 
 body{
 	padding-top:60px;
+	font-size:16px;
 	
 }
