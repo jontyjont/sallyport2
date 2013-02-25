@@ -7,6 +7,9 @@ end
 
 def show
  @dance = Blurb.where(:cat => 'dance').find(params[:id])
+ respond_to do |format|
+ 	format.js
+ end
 end
 
 
