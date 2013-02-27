@@ -2,6 +2,7 @@ class DancesController < ApplicationController
 
 def index
  @dances = Blurb.where(:cat => 'dance')
+ @dance = @dances.where("name like '%Newbiggin%'").first
 end
 
 

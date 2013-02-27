@@ -1,6 +1,7 @@
 Sallyport2::Application.routes.draw do
   
    root :to => 'homes#index'
+   get :contact_us, :to => 'homes#contact_us'
 
    resources :dances, :only => [:index, :show]
   # See how all your routes lay out with "rake routes"
