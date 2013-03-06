@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130211190504) do
+ActiveRecord::Schema.define(:version => 20130306181639) do
 
   create_table "blurbs", :force => true do |t|
     t.string "name",    :limit => 50
@@ -91,7 +91,7 @@ ActiveRecord::Schema.define(:version => 20130211190504) do
     t.string "mobile",   :limit => 50
     t.string "username", :limit => 50
     t.string "password", :limit => 50
-    t.string "type",     :limit => 50
+    t.string "role",     :limit => 50
   end
 
   create_table "posts", :force => true do |t|

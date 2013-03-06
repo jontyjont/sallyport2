@@ -1,1 +1,40 @@
 <h1>Contact Us</h1>
+<div style='float:right;margin:10px;width:50%;'>
+<p>Please fill in the form and submit or just phone Vince!</p>
+<%= image_tag 'vincephone.png' %>
+</div>
+<%= form_for :message, :url => send_message_path, :class => 'span4' do |f| %>
+<div class='control-group'>
+ <%= f.label "Your Name", :class =>'control-label' %>
+ <div class='controls'>
+ <%= f.text_field :name %>
+</div>
+</div>
+ <div class='control-group'>
+ <%= f.label "Your Email Address", :class =>'control-label' %>
+ <div class='controls'>
+ <%= f.text_field :email %>
+</div>
+</div>
+<div class='control-group'>
+ <%= f.label "Your Phone Number", :class =>'control-label' %>
+ <div class='controls'>
+ <%= f.text_field :phone %>
+</div>
+</div>
+<div class='control-group'>
+ <%= f.label "What it is about", :class =>'control-label' %>
+ <div class='controls'>
+ <%= f.text_field :subject %>
+</div>
+</div>
+<div class='control-group'>
+ <%= f.label "Your Message", :class =>'control-label' %>
+ <div class='controls'>
+ <%= f.text_area :text, :rows => 6, :style=>"width:50%;min-width:206px;" %>
+</div>
+</div>
+ <div class='controls'>
+ <%= f.submit "Send", :class => 'btn btn-inverse' %>
+</div>
+<% end %>

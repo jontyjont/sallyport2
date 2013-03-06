@@ -21,6 +21,11 @@
     </div>
     </div>
     <div class="container-fluid" >
+  <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, :class => "alert alert-#{key}") %>
+  <% end %>
+
+
           
     <div class="row-fluid">
     <div class="span2", style="text-align:center;">

@@ -1,0 +1,37 @@
+<html>
+
+<style type="text/css">
+
+body{
+	font-family: sans-serif;
+}
+p{
+	font-size:14px;
+}
+
+h1{
+	font-size:24px;
+}
+
+ul{
+	list-style: none outside none;
+}
+
+</style>
+
+<body>
+
+<h1>Message from the Sallyport Website</h1>
+
+<%= simple_format(@message.text) %>
+
+<hr/>
+
+<ul>
+<li>Name: <%= @message.name %></li>
+<li>Email: <%= @message.email %></li>
+<li>Phone: <%= @message.phone %></li>
+</ul>
+
+</body>
+</html>

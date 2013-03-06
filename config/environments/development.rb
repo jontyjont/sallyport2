@@ -34,4 +34,7 @@ Sallyport2::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.action_mailer.delivery_method = :email_spy
+
 end
