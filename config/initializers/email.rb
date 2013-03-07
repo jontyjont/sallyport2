@@ -5,8 +5,8 @@ ActionMailer::Base.smtp_settings = {
   :port           => '587',
   :authentication => :plain,
   :user_name      => 'app12937424@heroku.com',
-  :password       => 'wgvw1bhk',
-  :domain         => 'heroku.com'
+  :password       => 'wgvw1bhk'
+  
 }
 
 ActionMailer::Base.delivery_method ||= :smtp
