@@ -9,7 +9,7 @@ gem 'sqlite3', :group => [:development, :test]
 gem 'pg', :group => [:production]
 gem 'bootstrap-sass-rails', :git => 'https://github.com/yabawock/bootstrap-sass-rails.git'
 gem 'hashie'
-gem 'email_spy'
+gem 'email_spy', :group => [:development]
 
 # Gems used only for assets and not required
 # in production environments by default.
