@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130306181639) do
+ActiveRecord::Schema.define(:version => 20130320195015) do
 
   create_table "blurbs", :force => true do |t|
     t.string "name",    :limit => 50
@@ -84,15 +84,23 @@ ActiveRecord::Schema.define(:version => 20130306181639) do
   end
 
   create_table "members", :force => true do |t|
-    t.string "fname",    :limit => 50
-    t.string "sname",    :limit => 50
-    t.string "email",    :limit => 50
-    t.string "phone",    :limit => 50
-    t.string "mobile",   :limit => 50
-    t.string "username", :limit => 50
-    t.string "password", :limit => 50
-    t.string "role",     :limit => 50
+    t.string   "fname",                  :limit => 50
+    t.string   "sname",                  :limit => 50
+    t.string   "email",                  :limit => 50
+    t.string   "phone",                  :limit => 50
+    t.string   "mobile",                 :limit => 50
+    t.string   "username",               :limit => 50
+    t.string   "password_bak",           :limit => 50
+    t.string   "role",                   :limit => 50
+    t.string   "encrypted_password",                   :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string   "authentication_token"
   end
+
+  add_index "members", ["email"], :name => "index_members_on_email", :unique => true
+  add_index "members", ["reset_password_token"], :name => "index_members_on_reset_password_token", :unique => true
 
   create_table "posts", :force => true do |t|
     t.string    "title",      :limit => 50
