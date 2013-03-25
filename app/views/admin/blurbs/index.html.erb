@@ -1,0 +1,21 @@
+<h1>Blurbs</h1>
+
+<table class="table">
+<thead>
+<tr>
+<th>Id</th><th>Name</th><th>Category</th><th>Content</th>
+</tr>
+</thead>
+<tbody>
+ <% @blurbs.each do |blurb| %>
+ 	<tr>
+ 		<td><%= blurb.id %></td>
+ 		<td><%= link_to blurb.name, edit_admin_blurb_path(blurb) %></td>
+ 		<td><%= blurb.cat %></td>
+ 		<td><%= blurb.content.truncate 100 %></td>
+ 	</tr>
+
+ <% end %>
+</tbody>
+
+</table>

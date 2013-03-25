@@ -7,6 +7,14 @@ Sallyport2::Application.routes.draw do
    post :send_message, :to => 'homes#send_message'
 
    resources :dances, :only => [:index, :show]
+
+   namespace :admin do
+   	resources :blurbs, :except => :show
+
+
+   end
+
+
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
