@@ -3,22 +3,19 @@ class Admin::BlurbsController < Admin::ApplicationController
 	before_filter :find_blurb, :except => [:index, :new, :create]
 
 	def index
-		@blurbs = Blurb.scoped
+		@blurbs = Blurb.order(:cat, :id)
 	end
 
-	def show
-
-	end
-
+	
 	def new
      @blurb = Blurb.new
 
 	end
 
 	def create
-      @blurb = Blurb.create(:params[:blurb])
+      @blurb = Blurb.create(params[:blurb])
       if @blurb.save
-      	respond_with [:admin, @blurb], "Successfully created new blurb"
+      	redirect_to admin_blurbs_path, "Successfully created new blurb"
       else
       	render :new
       end
@@ -29,9 +26,9 @@ class Admin::BlurbsController < Admin::ApplicationController
 	end
 
 	def update
-	  @blurb.update_attributes(:params[:blurb])
+	  @blurb.update_attributes(params[:blurb])
       if @blurb.save
-      	respond_with [:admin, @blurb], "Successfully updated blurb"
+      	redirect_to admin_blurbs_path, notice: "Successfully updated blurb"
       else
       	render :edit
       end
@@ -41,9 +38,9 @@ class Admin::BlurbsController < Admin::ApplicationController
 
 	def destroy
 	  if @blurb.destroy
-      	respond_with [:admin, @blurb], :notice => "Successfully deleted blurb"
+      	redirect_to admin_blurbs_path, :notice => "Successfully deleted blurb"
       else
-      	render :show
+      	redirect_to admin_blurbs_path, :notice => "Sorry failed to delete because: #{@blurb.errors.full_messages.to_sentence}"
       end
 
 	end

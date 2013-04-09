@@ -1,6 +1,8 @@
 class Blurb < ActiveRecord::Base
-	# include DataMapper::Resource
-	# property :id, Serial
-	# property :name, String
-	# property :content, Text
+	attr_accessible :cat, :name, :content
+
+	def unfold_for_links
+		self.content.split("\r\n").map{|l| l.split("#")}
+	end
+
 end

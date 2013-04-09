@@ -1,0 +1,9 @@
+<h1>Rapper Resources</h1>
+
+<ul class='sites'>
+	<% @blurb.unfold_for_links.each do |site| %>
+		<li><%= link_to site[0], site[1] , target: '_blank' %></li>
+
+	<% end %>
+
+</ul>	

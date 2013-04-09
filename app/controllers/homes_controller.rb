@@ -1,12 +1,23 @@
+#encoding: utf-8
 class HomesController < ApplicationController
 
 def index
-  @intro= Blurb.where(:name=>'Homepage').first
+  @intro= Blurb.find_by_name('Homepage')
 end
 
 def contact_us
   session[:start_time] = Time.now
 end
+
+def help
+ @blurb = Blurb.find_by_name("Help for Visitors")
+end
+
+def useful_links
+  @blurb = Blurb.find_by_name ("sites")
+end
+
+
 
 def send_message
   if session[:start_time] > (Time.now - 15.seconds)

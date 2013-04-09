@@ -14,9 +14,37 @@
         <a class="brand" href="/">Sallyport Swords</a>
         <ul class="nav">
           <li><%= link_to "Dances", dances_path %></li>
-          <li><%= link_to "Contact Us", contact_us_path %></li>
+          <li><%= link_to "Contact Us", contact_us_path %></li>          
+          <li><%= link_to "Links", useful_links_path %></li>
+          <li><%= link_to "Help", help_path %></li>
+        <% if member_signed_in? && current_member.is_admin? %>
+          <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Admin
+              <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+              <li><%= link_to 'Blurbs', admin_blurbs_path %></li>
+              </ul>
+          </li>
+       
+          <% end %>
         </ul>
+          <div class='pull-right'>
+          <ul class='nav'>
+            <% if member_signed_in? %>
+              <li><%= link_to (current_member.fname + ': log out'), destroy_member_session_path, method: :delete %></li>
+              <% else %>
+              <li><%= link_to 'login', new_member_session_path %></li>
+            <% end %>
+         </ul>
+        </div> 
+               
     </div>
+    
+      
+    
+
     </div>
     </div>
     <div class="container-fluid" >

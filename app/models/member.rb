@@ -32,5 +32,8 @@ def self.admin_emails
 	Member.admin.all.map(&:email)
 end
 
+def is_admin?
+	self.role == "admin"
+end
 
 end

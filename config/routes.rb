@@ -4,6 +4,8 @@ Sallyport2::Application.routes.draw do
 
    root :to => 'homes#index'
    get :contact_us, :to => 'homes#contact_us'
+   get :help, :to => 'homes#help'
+   get :useful_links, :to => 'homes#useful_links'
    post :send_message, :to => 'homes#send_message'
 
    resources :dances, :only => [:index, :show]

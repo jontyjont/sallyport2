@@ -1,0 +1,14 @@
+<%= form_for [:admin, @blurb], html: {class: 'form-horizontal'} do |f| %>
+<%= form_fields(f, "Name", :name) %>
+<%= form_fields(f, "cat", :cat) %>
+<div class="control-group">
+  <%= f.label "Content" , class: 'control-label' %>
+  <%= f.text_area :content, style:"width:70%;height:auto;margin-left:20px;" %>
+</div>
+<div class="control-group">
+	<div>
+     <%= f.submit "Submit", class: 'btn btn-inverse' , style: 'margin-right:10%;float:right;' %>
+    </div>
+</div>
+
+<% end %>
