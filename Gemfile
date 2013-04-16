@@ -11,6 +11,8 @@ gem 'bootstrap-sass-rails', :git => 'https://github.com/yabawock/bootstrap-sass-
 gem 'hashie'
 gem 'email_spy', :group => [:development]
 gem 'devise'
+gem 'devise_security_extension'
+gem 'rails_email_validator'
 
 # Gems used only for assets and not required
 # in production environments by default.

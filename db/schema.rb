@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130320195015) do
+ActiveRecord::Schema.define(:version => 20130416201751) do
 
   create_table "blurbs", :force => true do |t|
     t.string "name",    :limit => 50
@@ -97,9 +97,11 @@ ActiveRecord::Schema.define(:version => 20130320195015) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string   "authentication_token"
+    t.datetime "password_changed_at"
   end
 
   add_index "members", ["email"], :name => "index_members_on_email", :unique => true
+  add_index "members", ["password_changed_at"], :name => "index_members_on_password_changed_at"
   add_index "members", ["reset_password_token"], :name => "index_members_on_reset_password_token", :unique => true
 
   create_table "posts", :force => true do |t|

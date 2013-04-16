@@ -3,7 +3,8 @@ class Member < ActiveRecord::Base
  #:confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable,   :token_authenticatable,
-         :recoverable, :rememberable,  :validatable
+         :recoverable, :rememberable,  :secure_validatable,
+         :password_expirable
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
