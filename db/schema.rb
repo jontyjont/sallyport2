@@ -11,63 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130416201751) do
+ActiveRecord::Schema.define(:version => 20130429210643) do
 
   create_table "blurbs", :force => true do |t|
     t.string "name",    :limit => 50
     t.text   "content"
     t.string "cat"
   end
-
-  create_table "comments", :force => true do |t|
-    t.text    "content"
-    t.integer "member_id", :null => false
-    t.integer "post_id",   :null => false
-  end
-
-  add_index "comments", ["member_id"], :name => "index_comments_member"
-  add_index "comments", ["post_id"], :name => "index_comments_post"
-
-  create_table "eventblogs", :force => true do |t|
-    t.text      "comment"
-    t.timestamp "created_at", :null => false
-    t.integer   "member_id",  :null => false
-    t.integer   "event_id",   :null => false
-  end
-
-  add_index "eventblogs", ["event_id"], :name => "index_eventblogs_event"
-  add_index "eventblogs", ["member_id"], :name => "index_eventblogs_member"
-
-  create_table "events", :force => true do |t|
-    t.string "name",        :limit => 50
-    t.string "where",       :limit => 50
-    t.string "wherelink",   :limit => 50
-    t.date   "when"
-    t.string "start",       :limit => 50
-    t.string "duration",    :limit => 50
-    t.text   "description"
-    t.text   "report"
-    t.string "eventlink",   :limit => 50
-    t.string "confirmed",   :limit => 50, :default => "maybe"
-  end
-
-  create_table "goings", :force => true do |t|
-    t.string  "status",    :limit => 50
-    t.integer "member_id",               :null => false
-    t.integer "event_id",                :null => false
-  end
-
-  add_index "goings", ["event_id"], :name => "index_goings_event"
-  add_index "goings", ["member_id"], :name => "index_goings_member"
-
-  create_table "guests", :force => true do |t|
-    t.string  "name",      :limit => 50
-    t.integer "member_id",               :null => false
-    t.integer "event_id",                :null => false
-  end
-
-  add_index "guests", ["event_id"], :name => "index_guests_event"
-  add_index "guests", ["member_id"], :name => "index_guests_member"
 
   create_table "images", :force => true do |t|
     t.string    "name",               :limit => 50
@@ -103,15 +53,6 @@ ActiveRecord::Schema.define(:version => 20130416201751) do
   add_index "members", ["email"], :name => "index_members_on_email", :unique => true
   add_index "members", ["password_changed_at"], :name => "index_members_on_password_changed_at"
   add_index "members", ["reset_password_token"], :name => "index_members_on_reset_password_token", :unique => true
-
-  create_table "posts", :force => true do |t|
-    t.string    "title",      :limit => 50
-    t.text      "content"
-    t.timestamp "created_at",               :null => false
-    t.integer   "member_id",                :null => false
-  end
-
-  add_index "posts", ["member_id"], :name => "index_posts_member"
 
   create_table "videos", :force => true do |t|
     t.string "name",        :limit => 50

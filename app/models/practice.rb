@@ -1,0 +1,5 @@
+class Practice < Event
+
+
+
+end

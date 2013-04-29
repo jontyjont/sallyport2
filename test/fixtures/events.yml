@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  what: MyString
+  when: 2013-04-29 22:17:57
+  where: MyString
+  yes: MyString
+  no: MyString
+  dk: MyString
+  prob: MyString
+  type: 
+
+two:
+  what: MyString
+  when: 2013-04-29 22:17:57
+  where: MyString
+  yes: MyString
+  no: MyString
+  dk: MyString
+  prob: MyString
+  type: 

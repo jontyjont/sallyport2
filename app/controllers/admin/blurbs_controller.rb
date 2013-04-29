@@ -15,7 +15,7 @@ class Admin::BlurbsController < Admin::ApplicationController
 	def create
       @blurb = Blurb.create(params[:blurb])
       if @blurb.save
-      	redirect_to admin_blurbs_path, "Successfully created new blurb"
+      	redirect_to admin_blurbs_path, notice: "Successfully created new blurb"
       else
       	render :new
       end
@@ -44,6 +44,7 @@ class Admin::BlurbsController < Admin::ApplicationController
       end
 
 	end
+
 
 	def find_blurb
 		@blurb = Blurb.find params[:id]
