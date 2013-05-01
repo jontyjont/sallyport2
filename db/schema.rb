@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130429211757) do
+ActiveRecord::Schema.define(:version => 20130501201911) do
 
   create_table "blurbs", :force => true do |t|
     t.string "name",    :limit => 50
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20130429211757) do
 
   create_table "events", :force => true do |t|
     t.string   "what"
-    t.datetime "when"
+    t.date     "when"
     t.string   "where"
     t.string   "yes"
     t.string   "no"
