@@ -7,7 +7,7 @@ gem 'rails', '3.2.12'
 
 gem 'sqlite3', :group => [:development, :test]
 gem 'pg', :group => [:production]
-gem 'bootstrap-sass-rails', :git => 'https://github.com/yabawock/bootstrap-sass-rails.git'
+gem 'bootstrap-sass-rails'#, :git => 'https://github.com/yabawock/bootstrap-sass-rails.git'
 gem 'hashie'
 gem 'email_spy', :group => [:development]
 gem 'devise'

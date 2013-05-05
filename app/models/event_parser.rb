@@ -9,7 +9,7 @@ GRAMMAR = {practice: /^\s?practice/i,
 		   dk: /^\s*dk:/i,
 		   prob: /^\s*prob:/i,
 		   booking: /^\s*booking(s)?:/i,
-		   booking2: /(^\s*.+,)(\s*.+\s+\d+)(.+\d+)?\./i,
+		   booking2: /^(\s*.+\,)(\s*.+\s+\d+)(.+\d+)?\./i,
 		   dert: /^(\s*dert\s*)(\d{4})/i,
 		   empty: /^\s*$/,
 		   end_section: /^=+$/
