@@ -180,9 +180,9 @@ Devise.setup do |config|
   # REST_AUTH_SITE_KEY to pepper)
   # config.encryptor = :sha512
 
-  # ==> Configuration for :token_authenticatable
+  # ==> Configuration for :token_authenticatable - GONE!
   # Defines name of the authentication token params key
-   config.token_authentication_key = :auth_token
+   #config.token_authentication_key = :auth_token
 
   # ==> Scopes configuration
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
@@ -317,5 +317,7 @@ Devise.setup do |config|
 
   # Time period for account expiry from last_activity_at
   # config.expire_after = 90.days
+  config.secret_key = 'f3fce8e352e1d390b9aa803318d3b80efd8699a91d27b610f24b947ee06ce48debd825bf56756210d0c64ea33952e33b714b74a3eafd5b9e2b6071336c7d59eb'
+
 
 end

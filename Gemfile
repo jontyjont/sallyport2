@@ -1,13 +1,17 @@
+
+#ruby=ruby-2.2.1@sallyport
+#ruby-gemset=sallyport
+
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails', '>=4.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3', :group => [:development, :test]
 gem 'pg', :group => [:production]
-gem 'bootstrap-sass-rails'#, :git => 'https://github.com/yabawock/bootstrap-sass-rails.git'
+gem 'bootstrap-sass'
 gem 'hashie'
 gem 'email_spy', :group => [:development]
 gem 'devise'
@@ -17,9 +21,8 @@ gem 'rails_email_validator'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
+  gem 'sass-rails'  
+  gem 'coffee-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
@@ -27,7 +30,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'thin'
+gem 'thin', :group => [:development]
+gem 'puma', :group => [:production]
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -42,4 +46,4 @@ gem 'thin'
 # gem 'capistrano'
 
 # To use debugger
- gem 'debugger', :group => [:development]
+# gem 'debugger', :group => [:development]
