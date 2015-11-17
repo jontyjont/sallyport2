@@ -13,7 +13,7 @@ class Admin::BlurbsController < Admin::ApplicationController
 	end
 
 	def create
-      @blurb = Blurb.create(params[:blurb])
+      @blurb = Blurb.create(blurb_params)
       if @blurb.save
       	redirect_to admin_blurbs_path, notice: "Successfully created new blurb"
       else
@@ -26,7 +26,7 @@ class Admin::BlurbsController < Admin::ApplicationController
 	end
 
 	def update
-	  @blurb.update_attributes(params[:blurb])
+	  @blurb.update_attributes(blurb_params)
       if @blurb.save
       	redirect_to admin_blurbs_path, notice: "Successfully updated blurb"
       else
@@ -50,5 +50,10 @@ class Admin::BlurbsController < Admin::ApplicationController
 		@blurb = Blurb.find params[:id]
 	end
 
+    private 
+
+    def blurb_params
+       params.require(:blurb).permit(:name, :cat, :content)
+    end
 
 end
