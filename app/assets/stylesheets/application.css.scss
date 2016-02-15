@@ -45,6 +45,7 @@ a.btn:hover, a:hover{
 
 }
 
+
  ul.nav  ul.dropdown-menu li a {
 	color:white;
 	background-color:#191919;
@@ -57,6 +58,10 @@ ul.nav  ul.dropdown-menu li a:focus
 	background-color:#C0090E;
 	background-image: none;
 	
+}
+
+.nav-pills > .active > a, .nav-pills > .active > a:hover {
+    background-color: red;
 }
 
 textarea:focus {
@@ -112,9 +117,7 @@ textarea:focus {
 
  .btn-inverse:hover{
   background-color: #222 !important;
-  color:yelllow !important;
+  color:yellow !important;
   }
 
-  a:visited{
-    color:#000;
-  }
+  
