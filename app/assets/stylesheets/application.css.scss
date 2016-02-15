@@ -12,11 +12,14 @@
 	}
 
 
-
 body{
 	
 	font-size:16px;
 	
+}
+
+ul {
+  list-style:none;
 }
 
 ul.dance{
@@ -37,7 +40,7 @@ ul.dance li {
 	color:white;
 	text-decoration:none;
 }
-  a:hover{
+a.btn:hover, a:hover{
 	color:yellow;
 
 }
@@ -102,3 +105,16 @@ textarea:focus {
    color:white;
  }
 
+ .btn-inverse{
+  background-color: #111!important;
+  color:white !important;
+ }
+
+ .btn-inverse:hover{
+  background-color: #222 !important;
+  color:yelllow !important;
+  }
+
+  a:visited{
+    color:#000;
+  }

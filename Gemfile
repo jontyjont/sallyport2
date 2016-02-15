@@ -4,15 +4,15 @@
 
 source 'https://rubygems.org'
 
-gem 'rails', '>=4.0.0'
+gem 'rails', '~> 4.2.5'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3', :group => [:development, :test]
 gem 'pg', :group => [:production]
-gem 'bootstrap-sass'
 gem 'hashie'
+gem 'bootstrap-sass'
 gem 'email_spy', :group => [:development]
 gem 'devise'
 gem 'devise_security_extension'
@@ -20,7 +20,7 @@ gem 'rails_email_validator'
 
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
+group :development do
   gem 'sass-rails'  
   gem 'coffee-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -30,8 +30,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'thin', :group => [:development]
-gem 'puma', :group => [:production]
+#gem 'thin', :group => [:development]
+gem 'puma'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

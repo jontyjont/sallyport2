@@ -1,20 +1,24 @@
 
-<section class="row-fluid">
-    <h2>Sallyport Sword Dancers</h2>
-<section class="span7 offset2">
-
-    <ul class="rslides">
-      <li><img src="http://sallyport.s3.amazonaws.com/images/morpeth.jpg" alt=""></li>
-      <li><img src="http://sallyport.s3.amazonaws.com/images/Pithead.jpg" alt=""></li>
-      <li><img src="http://sallyport.s3.amazonaws.com/images/Tanfield gates.JPG" alt=""></li>
-    </ul>
-   
+<section class="row">
+	<div class='col-md-12'>
+	   <h2>Sallyport Sword Dancers</h2>
+	</div>
 </section>
+<section class='row'>
+    <div class="col-md-12 ">
+	    <ul class="rslides" style='padding:0px;'>
+	      <li><img src="http://sallyport.s3.amazonaws.com/images/morpeth.jpg" alt="" style="width:100%;"></li>
+	      <li><img src="http://sallyport.s3.amazonaws.com/images/Pithead.jpg" alt="" style="width:100%;"></li>
+	      <li><img src="http://sallyport.s3.amazonaws.com/images/Tanfield gates.JPG" alt="" style="width:100%;"></li>
+	    </ul>
+    </div>
 </section>
-<section class="row-fluid ">
-<div class="span10 offset1" style="margin-top:20px;">
 
-<%= simple_format @intro.content %>
+<section class="row" style='margin-top:20px;'>
+<div class='col-md-12'>
+	
+		<%= simple_format @intro.content %>
+	
 </div>
 </section>
 
