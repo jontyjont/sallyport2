@@ -1,5 +1,5 @@
 
-#ruby=ruby-2.2.1@sallyport
+#ruby=ruby-2.3.0@sallyport
 #ruby-gemset=sallyport
 
 source 'https://rubygems.org'
