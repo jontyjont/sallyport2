@@ -9,7 +9,7 @@
 <tbody>
  <% @blurbs.each do |blurb| %>
  	<tr>
- 		<td><%= link_to blurb.name, edit_admin_blurb_path(blurb) %></td>
+ 		<td><%= link_to blurb.name.split(" ").join("<br/>").html_safe, edit_admin_blurb_path(blurb), :class => "btn btn-inverse btn-sm", :style =>"width:80px;" %></td>
  		<td><%= blurb.cat %></td>
  		<td><%= blurb.content.truncate 100 %></td>
  	</tr>

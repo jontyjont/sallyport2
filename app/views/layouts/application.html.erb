@@ -11,35 +11,38 @@
     <div class="navbar navbar-default navbar-inverse">
         
             <div class="container-fluid"> 
-            <div class='navbar-header'>
-              <a class="navbar-brand" href="/">Sallyport</a>             
-            </div>
-            <% if member_signed_in? %>
+            <div class="col-md-8">
+                <div class='navbar-header'>
+                  <a class="navbar-brand" href="/">Sallyport</a>             
+                </div>
+                
+                  <ul class="nav nav-pills">              
+                    <li><%= link_to "Dances", dances_path %></li>
+                    <li><%= link_to "Contact Us", contact_us_path %></li>          
+                    <li><%= link_to "Links", useful_links_path %></li>
+                    <li><%= link_to "Help", help_path %></li>
+                  <% if member_signed_in? && current_member.is_admin? %>
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                          Admin <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                           <li><%= link_to 'Blurbs', admin_blurbs_path %></li>
+                        </ul>
+                      </li>
+                        
+                    </li>
+                 
+                    <% end %>
+                  </ul>
+              </div>
+              <div class="col-md-4">
+                <% if member_signed_in? %>
                   <%= link_to (current_member.fname + ': log out'), destroy_member_session_path, method: :delete , :class => 'btn navbar-btn pull-right' %>
                   <% else %>
-                  <%= link_to 'login', new_member_session_path, :class => 'btn btn-default  pull-right'  %>
+                  <%= link_to 'login', new_member_session_path, :class => 'btn navbar-btn btn-inverse  pull-right'  %>
                 <% end %>
-              <ul class="nav nav-pills">              
-                <li><%= link_to "Dances", dances_path %></li>
-                <li><%= link_to "Contact Us", contact_us_path %></li>          
-                <li><%= link_to "Links", useful_links_path %></li>
-                <li><%= link_to "Help", help_path %></li>
-              <% if member_signed_in? && current_member.is_admin? %>
-                <li role="presentation" class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                      Admin <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                       <li><%= link_to 'Blurbs', admin_blurbs_path %></li>
-                    </ul>
-                  </li>
-                    
-                </li>
-             
-                <% end %>
-                
-              </ul>
-              
+              </div>
               
                             
             </div>
@@ -47,6 +50,7 @@
 
   <div class="container" >
         <% flash.each do |key, value| %>
+           <% key = 'info' if key  == 'notice' %>
           <%= content_tag(:div, value, :class => "alert alert-#{key}") %>
         <% end %>         
     <div class="row">

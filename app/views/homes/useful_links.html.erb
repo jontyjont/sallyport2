@@ -2,7 +2,7 @@
 
 <ul class='sites'>
 	<% @blurb.unfold_for_links.each do |site| %>
-		<li><%= link_to site[0], site[1] , target: '_blank' %></li>
+		<li><%= link_to site[0], site[1] , target: '_blank', :class => 'btn btn-inverse', :style => "margin-bottom:10px;" %></li>
 
 	<% end %>
 
