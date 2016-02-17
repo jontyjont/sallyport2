@@ -24,6 +24,7 @@ gem 'coffee-rails'
 # gem 'therubyracer', :platforms => :ruby
 
 gem 'uglifier', '>= 1.0.3'
+gem  'rails_12factor', :group => :production
 
 
 gem 'jquery-rails'
