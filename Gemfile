@@ -18,18 +18,13 @@ gem 'email_spy', :group => [:development]
 gem 'devise'
 gem 'devise_security_extension'
 gem 'rails_email_validator'
-gem 'sass-rails' 
+gem 'sass-rails'    
+gem 'coffee-rails'
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# gem 'therubyracer', :platforms => :ruby
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :development do
-   
-  gem 'coffee-rails'
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+gem 'uglifier', '>= 1.0.3'
 
-  gem 'uglifier', '>= 1.0.3'
-end
 
 gem 'jquery-rails'
 #gem 'thin', :group => [:development]
