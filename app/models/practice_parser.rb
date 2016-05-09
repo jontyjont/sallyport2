@@ -13,7 +13,7 @@ class PracticeParser
 			   
   def initialize
 	@blurb = Blurb.where(:name =>"practices").first
-	@blurb.content.gsub("\r\n\r\n", "\r\n").split("\r\n") if @blurb
+	@blurb = @blurb.content.gsub("\r\n\r\n", "\r\n").split("\r\n") if @blurb
   end
 
     #helper to reduce typing
@@ -25,6 +25,7 @@ def parse
 	obj = nil
 	flag = nil
 	prev_line = nil
+	return unless @blurb.present?
 	@blurb.each_with_index do |line, i|
 		next_line = @blurb[i+1] if (i < (@blurb.length - 1))
 		
