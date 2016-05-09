@@ -25,6 +25,7 @@ gem 'coffee-rails'
 
 gem 'uglifier', '>= 1.0.3'
 gem  'rails_12factor', :group => :production
+gem 'awesome_print'
 
 
 gem 'jquery-rails'

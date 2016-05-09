@@ -49,10 +49,16 @@
     </div>  
 
   <div class="container" >
+
         <% flash.each do |key, value| %>
            <% key = 'info' if key  == 'notice' %>
           <%= content_tag(:div, value, :class => "alert alert-#{key}") %>
-        <% end %>         
+        <% end %>
+        <% if @practice %>
+            <div class="row" id='next-practice'>
+              <%== next_practice @practice %>
+            </div>
+        <% end %>
     <div class="row">
       <div class="col-md-2", style="text-align:center;">
         <%= image_tag 'logo.png', :style=> 'margin-left:23px;margin-top:-7px;' %>

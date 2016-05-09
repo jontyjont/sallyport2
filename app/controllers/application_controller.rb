@@ -5,5 +5,6 @@ class ApplicationController < ActionController::Base
 
   def get_dances
   	 @dances = Blurb.where(:cat => 'dance')
+  	 @practice = Practice.next_practice
   end
 end

@@ -10,6 +10,7 @@ class PracticeParser
 			   empty: /^\s*$/,
 			   end_section: /^=+$/
 			   }
+			   
   def initialize
 	@blurb = Blurb.where(:name =>"practices").first.
 				content.gsub("\r\n\r\n", "\r\n").
@@ -37,6 +38,8 @@ def parse
 			obj = Practice.new
 			obj.when = Date.parse($~[0])
 			obj.where = $' if $'.present?
+			pexist = Practice.where(:when => obj.when).first
+			pexist.destroy if pexist
 		
 		when reg(:yes)
 			obj.yes = $'
