@@ -7,7 +7,7 @@ class Blurb < ActiveRecord::Base
 
 	private
 
-	def parse_practices
+	def parse_practices		
       parser = PracticeParser.new
       parser.parse
 	end

@@ -12,9 +12,8 @@ class PracticeParser
 			   }
 			   
   def initialize
-	@blurb = Blurb.where(:name =>"practices").first.
-				content.gsub("\r\n\r\n", "\r\n").
-				split("\r\n")
+	@blurb = Blurb.where(:name =>"practices").first
+	@blurb.content.gsub("\r\n\r\n", "\r\n").split("\r\n") if @blurb
   end
 
     #helper to reduce typing
