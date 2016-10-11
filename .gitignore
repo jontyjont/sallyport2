@@ -18,3 +18,5 @@
 /config/database.yml
 .idea/
 config/database.yml
+/.byebug_history
+.byebug_history
