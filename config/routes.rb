@@ -10,9 +10,16 @@ Sallyport2::Application.routes.draw do
 
    resources :dances, :only => [:index, :show]
 
+   resources :services, :only => [] do
+     collection do
+       get   :new_ip
+       post  :set_ip
+       get   :tvheadend
+     end
+   end
+
    namespace :admin do
    	resources :blurbs, :except => :show
-
 
    end
 

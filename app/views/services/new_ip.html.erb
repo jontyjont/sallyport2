@@ -1,0 +1,11 @@
+<h1>IP</h1>
+
+<%= form_for :ip, :url => set_ip_services_path do |f| %>
+    <%= form_fields(f, "Ip Address", :number) %>
+
+    <div class='form-group width-maxed'>
+      <%= f.label " "  %>
+      <%= f.submit "Submit", class: 'btn btn-inverse pull-right'  %>
+    </div>
+
+<% end %>

@@ -1,10 +1,10 @@
 module ApplicationHelper
 
-def form_fields(form, label, value)
+def form_fields(form, label, value, val=nil)
 out=""
 out << "<div class='form-group width-maxed'>
 <label>#{label}</label>
-#{form.text_field value, :class => 'form-control '}
+#{form.text_field value, :class => 'form-control ', :value => val}
 </div>"
 out.html_safe
 end
