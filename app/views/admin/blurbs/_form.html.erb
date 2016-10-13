@@ -1,6 +1,9 @@
 <%= form_for [:admin, @blurb] do |f| %>
-<%= form_fields(f, "Name", :name) %>
-<%= form_fields(f, "cat", :cat) %>
+ <% if @blurb.errors.any? %>
+        <%= render 'errors', object: @blurb %>
+ <% end %>
+<%= form_fields(f, "Name", :name, f.object.name) %>
+<%= form_fields(f, "cat", :cat, f.object.cat) %>
 <div class='form-group width-maxed'>
 	<%= f.label "Content"  %>
 

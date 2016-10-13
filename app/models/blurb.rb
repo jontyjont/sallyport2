@@ -1,6 +1,8 @@
 class Blurb < ActiveRecord::Base
 	after_save :parse_practices
 
+  validates  :name, :content, :presence => true
+
 	def unfold_for_links
 		self.content.split("\r\n").map{|l| l.split("#")}
 	end
