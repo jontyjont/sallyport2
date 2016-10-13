@@ -1,7 +1,7 @@
 class Practice < Event
 
 def self.next_practice
-   Practice.where("\"when\" > ?", Date.today).order("\"when\" ASC").first
+   Practice.where("\"when\" >= ?", Time.zone.now.end_of_day ).order("\"when\" ASC").first
 end
 
 
