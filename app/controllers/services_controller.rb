@@ -17,7 +17,7 @@ class ServicesController < ApplicationController
   def tvheadend
     ip = Rails.cache.read("the_ip_address")
     raise ActiveRecord::RecordNotFound unless ip.present?
-    tvh = "http://#{ip}:9002/ext.js"
+    tvh = "http://#{ip}:9981/extjs.html"
     redirect_to tvh
   end
 
