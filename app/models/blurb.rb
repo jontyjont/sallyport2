@@ -9,7 +9,9 @@ class Blurb < ActiveRecord::Base
 
 	private
 
-	def parse_practices		
+	def parse_practices
+		return unless self.name == 'practices'
+		  Practice.destroy_future!
       parser = PracticeParser.new
       parser.parse
 	end
